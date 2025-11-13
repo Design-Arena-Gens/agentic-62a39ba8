@@ -1,0 +1,250 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(88, 28, 135, 0.65), rgba(10, 10, 10, 0.9) 65%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1200px, 90vw);
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.neon-card {
+  background: rgba(17, 17, 17, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(88, 28, 135, 0.4);
+  backdrop-filter: blur(16px);
+}
+
+.grid {
+  display: grid;
+  gap: 32px;
+}
+
+.two-column {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(88, 28, 135, 0.4);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  padding: 6px 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+}
+
+.button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(236, 72, 153, 0.35);
+}
+
+.button-primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+.input-group {
+  display: grid;
+  gap: 18px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-field label {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.input-field input,
+.input-field textarea,
+.input-field select {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(24, 24, 24, 0.85);
+  padding: 14px 16px;
+  color: white;
+  font-size: 15px;
+  resize: vertical;
+  min-height: 48px;
+}
+
+.input-field textarea {
+  min-height: 120px;
+}
+
+.cards-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.cards-stack article {
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cards-stack h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.cards-stack p {
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.output-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.output-content {
+  display: grid;
+  gap: 24px;
+}
+
+.output-section h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.output-section p,
+.output-section ul {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.output-section ul {
+  padding-left: 18px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.metric-card {
+  padding: 16px 18px;
+  background: rgba(236, 72, 153, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
+
+.metric-card strong {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.metric-card span {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+}
+
+.timeline-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-step {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(24, 24, 24, 0.9);
+}
+
+.timeline-step header {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    padding: 32px 0 48px;
+  }
+
+  .output-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
